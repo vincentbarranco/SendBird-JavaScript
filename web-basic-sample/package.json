@@ -4,12 +4,14 @@
   "description": "SendBird Web Basic Sample",
   "main": "index.js",
   "scripts": {
+    "copyArachne": "cp ./src/js/arachneHeartbeat.js ./dist",
     "dev": "./node_modules/.bin/webpack --mode=development",
     "dev:w": "./node_modules/.bin/webpack --mode=none -w",
     "build": "./node_modules/.bin/webpack --mode=production",
     "start:dev": "./node_modules/.bin/webpack-dev-server",
     "start": "npm run build && node server.js",
-    "deploy": "node ./deploy/deploy.js"
+    "deploy": "node ./deploy/deploy.js",
+    "postinstall": "npm run copyArachne"
   },
   "author": "SendBird",
   "license": "ISC",
